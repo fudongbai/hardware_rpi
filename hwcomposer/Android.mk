@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(BOARD_USES_DRM_HWCOMPOSER),true)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -36,3 +37,4 @@ LOCAL_CFLAGS += \
 	-Wno-sign-compare
 
 include $(BUILD_SHARED_LIBRARY)
+endif

@@ -1,3 +1,4 @@
+ifeq ($(BOARD_USES_DRM_GRALLOC),true)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -48,3 +49,4 @@ LOCAL_CFLAGS += \
 	-Wno-unused-variable
 
 include $(BUILD_SHARED_LIBRARY)
+endif
